@@ -1,0 +1,24 @@
+node_modules/
+vendor/
+.env
+*.log
+dist/
+.cache/
+backend/storage/logs/*.log
+backend/bootstrap/cache/*.php
+backend/database/database.sqlite
+Front-End Electronics E-commerce Website/
+.freebuff/
+_imgtest.html
+_sitepreview.html
+audit.bat
+install-startup.bat
+install-stop-task.bat
+open-ports.bat
+outstart.cmd
+outstop.cmd
+run-backend.cmd
+run-frontend.cmd
+startup.cmd
+start.bat
+stop.bat
