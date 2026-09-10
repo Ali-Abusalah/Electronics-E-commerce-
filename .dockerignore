@@ -1,0 +1,13 @@
+node_modules/
+vendor/
+.env
+*.log
+dist/
+.cache/
+.git/
+frontend/node_modules/
+frontend/dist/
+backend/vendor/
+backend/storage/logs/*.log
+backend/bootstrap/cache/*.php
+backend/database/database.sqlite
