@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useCart } from '../context/CartContext'
 import { useWishlist } from '../context/WishlistContext'
+import { useDarkMode } from '../context/DarkModeContext'
 
 const CATEGORIES = [
   { name: 'All', value: '' },
@@ -19,6 +20,7 @@ export default function Navbar({ onOpenCart }) {
   const { user, logout } = useAuth()
   const { cartCount } = useCart()
   const { wishlistCount } = useWishlist()
+  const { dark, toggle: toggleDark } = useDarkMode()
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const [search, setSearch] = useState(searchParams.get('search') || '')
@@ -68,6 +70,15 @@ export default function Navbar({ onOpenCart }) {
         </form>
 
         <nav className="nav-actions" aria-label="Account">
+          <button
+            type="button"
+            className="dark-toggle"
+            onClick={toggleDark}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            data-tooltip={dark ? 'Light mode' : 'Dark mode'}
+          >
+            {dark ? '☀️' : '🌙'}
+          </button>
           {user ? (
             <div className="user-menu">
               <span className="user-chip">Hi, {user.name}</span>

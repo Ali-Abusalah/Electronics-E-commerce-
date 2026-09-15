@@ -9,11 +9,13 @@ import Checkout from './pages/Checkout'
 import MyOrders from './pages/MyOrders'
 import Wishlist from './pages/Wishlist'
 import { WishlistProvider } from './context/WishlistContext'
+import { DarkModeProvider } from './context/DarkModeContext'
 
 export default function App() {
   const [cartOpen, setCartOpen] = useState(false)
 
   return (
+    <DarkModeProvider>
     <WishlistProvider>
       <Navbar onOpenCart={() => setCartOpen(true)} />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
@@ -130,5 +132,6 @@ export default function App() {
         </div>
       </footer>
     </WishlistProvider>
+    </DarkModeProvider>
   )
 }

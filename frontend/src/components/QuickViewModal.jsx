@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useCart } from '../context/CartContext'
 import { formatPrice } from '../utils/format'
+import Reviews from './Reviews'
 
 export default function QuickViewModal({ product, onClose }) {
   const { addToCart } = useCart()
@@ -75,6 +76,8 @@ export default function QuickViewModal({ product, onClose }) {
             >
               {inStock ? 'Add to Cart' : 'Unavailable'}
             </button>
+
+            <Reviews productId={product.id} />
           </div>
         </div>
       </div>
