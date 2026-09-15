@@ -30,11 +30,6 @@ Route::middleware('auth')->name('admin.')->group(function () {
     Route::get('/orders/{order}/invoice', [OrderController::class, 'invoice'])->name('orders.invoice');
 });
 
-// SPA fallback - serve React app for all other routes
-Route::get('/{any}', function () {
-    $path = public_path('index.html');
-    if (file_exists($path)) {
-        return file_get_contents($path);
-    }
-    return redirect('/');
-})->where('any', '.*');
+Route::get('/', function () {
+    return redirect('/login');
+});
