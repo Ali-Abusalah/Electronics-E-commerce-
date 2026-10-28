@@ -99,13 +99,13 @@ echo.
 echo [9] CORS CONFIG
 echo -----------------------------------------------
 echo Checking backend CORS config...
-findstr "allowed_origins" "C:\Users\ALI.A.SALAH\Desktop\Front-End Electronics E-commerce Website me\backend\config\cors.php"
+findstr "allowed_origins" "C:\Users\ALI.A.SALAH\Desktop\projects\Front-End Electronics E-commerce Website me\backend\config\cors.php"
 echo.
 
 :: ---- 10. Sanctum Config ----
 echo [10] SANCTUM STATEFUL DOMAINS
 echo -----------------------------------------------
-findstr "SANCTUM_STATEFUL_DOMAINS" "C:\Users\ALI.A.SALAH\Desktop\Front-End Electronics E-commerce Website me\backend\.env"
+findstr "SANCTUM_STATEFUL_DOMAINS" "C:\Users\ALI.A.SALAH\Desktop\projects\Front-End Electronics E-commerce Website me\backend\.env"
 echo.
 
 echo  =============================================
